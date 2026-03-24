@@ -76,7 +76,7 @@ const UploadData = () => {
       const formData = new FormData();
       formData.append('file', file);
 
-      const response = await fetch('http://localhost:5000/predict_batch', {
+      const response = await fetch('https://cipherflux.onrender.com/predict_batch', {
         method: 'POST',
         body: formData,
       });
@@ -146,7 +146,7 @@ const UploadData = () => {
               invalid_ip: 0
           };
 
-          const response = await fetch('http://localhost:5000/predict', {
+          const response = await fetch('https://cipherflux.onrender.com/predict', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(backendTx)
